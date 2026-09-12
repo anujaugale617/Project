@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --surface-elevated: #f1f5f9;
+    --border-color: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+  }
+
+  .dark {
+    --background: #070b19;
+    --surface: #0d1527;
+    --surface-elevated: #152038;
+    --border-color: #1e2d4a;
+    --border-strong: #2a3c61;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Enterprise table & card helper classes */
+.card-panel {
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.table-header {
+  background-color: var(--surface-elevated);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
